@@ -103,7 +103,7 @@ function LaunguageManager() {
           ></iframe>
         </Row>
       </Container>
-
+      
       <Footer />
     </div>
   );

@@ -1,3 +1,37 @@
+.footer {
+  background-color: rgb(22, 22, 23) !important;
+  position: fixed;
+  bottom: 0;
+  height: 36px;
+  color: rgb(255, 0, 242);
+  text-align: center;
+  line-height: 2.5;
+  justify-content: center !important;
+}
+
+.editor-lang {
+  padding: 10px !important;
+}
+
+.editor-text {
+  text-align: center;
+  background-color: rgba(30, 30, 30, 0.87);
+  color: rgba(255, 255, 255, 0.972);
+  font-size: 1.2em;
+  line-height: 2;
+  justify-content: center;
+}
+
+.output-pane {
+  left: 0;
+  border: 0px solid;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+
 .btn:focus,
 .btn:active {
   outline: none !important;
@@ -12,7 +46,9 @@ pre {
 }
 
 .btn-primary:hover {
-  background-color: rgb(127, 62, 187) !important;
+  color: white !important;
+  border: 0px !important;
+  background-color: #775ad6 !important;
 }
 
 @media (max-width: 768px) {
@@ -21,42 +57,8 @@ pre {
   }
 }
 .pane.pane-top {
-  background-color: #202429;
+  background-color: #232323;
   padding-left: 5px !important;
   padding-right: 5px !important;
-  justify-content: center !important;
-}
-
-.editor-lang {
-  padding: 10px !important;
-}
-
-.editor-text {
-  text-align: center;
-  background-color: rgb(49 48 51 / 87%);
-  color: rgba(250, 230, 194, 0.972);
-  font-size: 1.2em;
-  line-height: 2;
-  justify-content: center;
-}
-
-.output-pane {
-  left: 0;
-  border: 0px solid;
-  position: absolute;
-  height: 50%;
-  width: 100%;
-  background-color: white;
-  padding-bottom: 20px;
-}
-
-.footer {
-  background-color: rgb(4, 11, 15) !important;
-  position: fixed;
-  bottom: 0;
-  height: 36px;
-  color: rgb(246, 225, 188);
-  text-align: center;
-  line-height: 2.5;
   justify-content: center !important;
 }

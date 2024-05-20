@@ -1,113 +1,107 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import sh1 from "../Assets/shape-1.svg";
-import sh2 from "../Assets/shape-2.svg";
-import sh3 from "../Assets/shape-3.svg";
-import sh6 from "../Assets/shape-6.svg";
-import homeImg from "../Assets/hero-img.png";
 import { Link } from "react-router-dom";
 import "../App.css";
+import picture from "../Assets/picture.png";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function Home() {
   const wrapper = {
     width: "100%",
-    justifyContent: "center",
-    alignItems: "center",
     display: "flex",
-    overflow: "hidden",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    minHeight: "100vh",
+    background: "linear-gradient(to bottom right, #000000, #6b38fb)",
+    color: "#6B38FB",
+    fontFamily: "'Jacquard 12', sans-serif",
+    padding: "20px",
     position: "relative",
   };
 
-  const shape1 = {
-    left: 0,
-    right: 0,
-    margin: "auto",
-    top: "90px",
-    position: "absolute",
+  const titleStyle = {
+    textAlign: "left",
+    marginTop: "0.1vh",
+    marginBottom: "5vh",
+    fontSize: "11vw",
+    color: "#FFFFFF",
   };
 
-  const shape2 = {
-    right: "380px",
-    top: "280px",
-    position: "absolute",
+  const textStyle = {
+    textAlign: "left",
+    marginBottom: "5vh",
+    fontSize: "0.5vw",
+    color: "#FFFFFF",
+    shapeOutside: "url(" + picture + ")",
+    float: "left",
+    width: "50%",
+    padding: "0 20px",
+    fontFamily: "Pixelify Sans",
   };
 
-  const shape3 = {
-    right: "88px",
-    top: "230px",
-    position: "absolute",
-  };
-
-  const shape6 = {
-    right: "272px",
-    bottom: "0px",
-    position: "absolute",
+  const btnWrapper = {
+    display: "flex",
+    justifyContent: "flex-start",
+    gap: "20px",
+    marginTop: "5vh",
   };
 
   const btnStyle = {
-    backgroundColor: "#5c4389",
-    border: 0,
+    fontFamily: "Pixelify Sans",
+    fontWeight: 600,
+    fontSize: "1.1vw",
+    padding: "10px 20px",
+    backgroundColor: "transparent",
+    color: "#FFFFFF",
+    border: "0px solid #E437FB",
+    borderRadius: "50px",
+    transition: "background-color 0.3s ease-in-out",
+  };
+
+  const webBtnStyle = {
+    ...btnStyle,
+    backgroundColor: "#E437FB",
+  };
+
+  const markdownBtnStyle = {
+    ...btnStyle,
+    border: "2px solid #8e0ce8",
+    color: "#8e0ce8",
+  };
+
+  const imgStyle = {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    maxWidth: "50%",
+    height: "auto",
   };
 
   return (
-    <div
-      style={{ backgroundColor: "#2a283e", minHeight: "100vh", height: "auto" }}
-    >
-      <Container style={wrapper}>
-        <img src={sh1} alt="fig1" style={shape1} className="shape" />
-        <img src={sh2} alt="fig2" style={shape2} className="shape" />
-        <img src={sh3} alt="fig3" style={shape3} className="shape" />
-        <img src={sh6} alt="fig6" style={shape6} className="shape" />
-        <Row
-          className="text-center"
-          style={{
-            alignItems: "center",
-            paddingTop: "100px",
-            paddingBottom: "50px",
-          }}
-        >
-          <Col md={6}>
-            <img
-              src={homeImg}
-              className="img-fluid"
-              alt="main img"
-              style={{ justifyContent: "center", padding: "30px" }}
-            />
-          </Col>
-          <Col md={6}>
-            <h2 style={{ color: "#f0c19e" }}>Превратите идеи в веб-проекты из любой точки мира</h2>
-            <h5
-              style={{
-                textAlign: "justify",
-                color: "rgb(154 179 205)",
-                paddingTop: "10px",
-              }}
-            >
-              Создавайте и тестируйте веб-страницы с помощью данного инструмента для веб-разработки.
-            </h5>
-            <Button variant="primary" style={btnStyle} as={Link} to="/web">
-              Web Editor
-            </Button>
-
-            <h2 style={{ color: "#f0c19e", paddingTop: "70px" }}>
-            Создание README стало проще, чем когда-либо
-            </h2>
-            <h5
-              style={{
-                textAlign: "justify",
-                color: "rgb(154 179 205)",
-                paddingTop: "10px",
-              }}
-            >
-              Онлайн редактор markdown с интуитивно понятным интерфейсом, который поможет создать качественную документацию для проекта всего за считанные секунды.
-            </h5>
-            <Button variant="primary" style={btnStyle} as={Link} to="/markdown">
-              Markdown Editor
-            </Button>
-          </Col>
+    <div style={wrapper}>
+      <Container>
+        <Row style={{ width: "100%" }}>
+          <h1 style={titleStyle}>CodeEditor</h1>
         </Row>
+        <Row style={{ width: "100%", justifyContent: "flex-start" }}>
+          <div style={textStyle}>
+            <h5>
+              С помощью данного редактора вы можете превратить свои идеи в веб-проекты из любой точки мира. Создавайте и тестируйте веб-страницы с помощью этого мощного инструмента для веб-разработки.
+            </h5>
+          </div>
+        </Row>
+        <div style={btnWrapper}>
+          <Button variant="primary" style={webBtnStyle} as={Link} to="/web">
+            web-editor
+          </Button>
+          <Button variant="primary" style={markdownBtnStyle} as={Link} to="/markdown">
+            markdown-editor
+          </Button>
+        </div>
+        <img src={picture} alt="stone angel" style={imgStyle} />
       </Container>
     </div>
   );

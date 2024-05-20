@@ -1,6 +1,6 @@
 import React from "react";
 import "codemirror/lib/codemirror.css";
-import "codemirror/theme/material.css";
+import "codemirror/theme/dracula.css";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
@@ -18,7 +18,7 @@ function Editor(props) {
         value={props.value}
         options={{
           mode: mode,
-          theme: "material",
+          theme: "dracula",
           lineNumbers: true,
           scrollbarStyle: "null",
           lineWrapping: true,

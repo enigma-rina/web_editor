@@ -20,13 +20,14 @@ function Editor() {
   - _Загрузка файла_`;
 
   const body = {
-    background: "rgb(17 36 39 / 94%)",
+    background: "#222223",
     paddingTop: "30px",
     paddingBottom: "50px",
-    fontFamily: "monospace",
-    color: "wheat",
+    fontFamily: "Pixelify Sans",
+    color: "white",
   };
   const mdIn = {
+    fontFamily: "monospace",
     width: "100%",
     height: "auto",
     minHeight: "80vh",
@@ -38,6 +39,7 @@ function Editor() {
     outline: "none",
   };
   const mdOut = {
+    fontFamily: "monospace",
     width: "100%",
     height: "auto",
     minHeight: "80vh",

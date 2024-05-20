@@ -8,6 +8,8 @@ function Toolbar(props) {
     fontSize: "12px",
     lineHeight: "20px",
     margin: "3px",
+    background: "#E437FB",
+    border: 0,
   };
 
   return (
